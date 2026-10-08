@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jana Elshoura, Business Informatics student at GIU. University projects in startup building, customer analytics and big data.">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Jana Elshoura Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column; each project is a case file with a meta strip, what I did, then its evidence */
+:root{
+  --bg:#f5f6f8; --panel:#ffffff; --fg:#1b2030; --muted:#5b6275; --line:#dfe2ea; --accent:#2b4bd6; --chip:#e8ecfb;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Sans 3",ui-sans-serif,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#11141c;--panel:#181c27;--fg:#e7e9f0;--muted:#9aa1b4;--line:#2a3040;--accent:#8ea2ff;--chip:#232a42;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#11141c;--panel:#181c27;--fg:#e7e9f0;--muted:#9aa1b4;--line:#2a3040;--accent:#8ea2ff;--chip:#232a42;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:17px/1.6 var(--body);padding-inline:16px;padding-block:40px 80px}
+main{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+header{display:flex;flex-direction:column;gap:12px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(36px,7vw,60px)/1.02 var(--display);margin:0;letter-spacing:-.01em;text-wrap:balance}
+.lede{margin:0;max-width:62ch;color:var(--muted)}
+.contact{display:flex;flex-wrap:wrap;gap:8px 24px;font:14px/1.4 var(--mono);color:var(--muted)}
+.contact span{user-select:all}
+
+nav{display:flex;flex-wrap:wrap;gap:8px}
+nav a{font:500 14px/1 var(--body);text-decoration:none;color:var(--fg);border:1px solid var(--line);padding:9px 14px;border-radius:999px;background:var(--panel)}
+nav a:hover{border-color:var(--accent);color:var(--accent)}
+
+.project{display:flex;flex-direction:column;gap:18px;padding-top:28px;border-top:1px solid var(--line);scroll-margin-top:24px}
+.project h2{font:700 clamp(26px,4.5vw,36px)/1.1 var(--display);margin:0;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;font:13px/1.4 var(--mono);color:var(--muted);margin:0}
+.meta b{color:var(--fg);font-weight:500}
+.summary{margin:0;max-width:66ch;font-size:19px;line-height:1.5}
+.cols{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:760px){.cols{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}}
+.did h3,.facts h3{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.did ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.facts{display:flex;flex-direction:column;gap:14px}
+.figures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.figure{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.figure strong{display:block;font:700 26px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.figure span{font-size:14px;color:var(--muted);line-height:1.35;display:block;margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:12px/1 var(--mono);background:var(--chip);padding:7px 9px;border-radius:4px}
+
+.gallery{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+@media (min-width:640px){.gallery.two{grid-template-columns:repeat(2,minmax(0,1fr))}}
+figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
+figure img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);background:#fff}
+figcaption{font-size:14px;color:var(--muted)}
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:520px){.phones{grid-template-columns:minmax(0,1fr)}.phones figure{max-width:280px;margin-inline:auto;width:100%}}
+.phones video{width:100%;aspect-ratio:384/832;max-width:100%;border-radius:18px;border:1px solid var(--line);background:#000;display:block}
+
+.open{align-self:flex-start;font:600 15px/1 var(--body);text-decoration:none;background:var(--accent);color:var(--panel);padding:12px 16px;border-radius:6px}
+.open:hover{filter:brightness(1.08)}
+footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+
+<main>
+  <header>
+    <div class="eyebrow">Project portfolio</div>
+    <h1>Jana Elshoura</h1>
+    <p class="lede">Final year Business Informatics student at the German International University in Cairo. These are my university projects in startup building, customer analytics and big data, with the prototypes, charts and code behind them.</p>
+    <div class="contact">
+      <span>janaelshoura@gmail.com</span>
+      <a href="https://www.linkedin.com/in/jana-alshoura-9526a0415" target="_blank" rel="noopener">LinkedIn profile</a>
+    </div>
+    <nav aria-label="Projects">
+      <a href="#buildx">BuildX</a>
+      <a href="#churn">Customer Churn</a>
+      <a href="#bankease">BankEase</a>
+      <a href="#citibike">Citi Bike</a>
+    </nav>
+  </header>
+
+  <section class="project" id="buildx">
+    <h2>BuildX: Startup Execution Platform</h2>
+    <p class="meta"><span><b>Role</b> CEO and Founder</span><span><b>Course</b> Business Simulation, grade A+</span><span><b>When</b> Spring 2026</span></p>
+    <p class="summary">A mobile app that matches young Egyptian entrepreneurs with committed co founders, then guides them through a 90 day roadmap of weekly milestones until they launch.</p>
+    <div class="cols">
+      <div class="did">
+        <h3>What I did</h3>
+        <ul>
+          <li>Co created the idea from scratch and led the team as CEO.</li>
+          <li>Designed the full app prototype and user journey in Figma, from sign up and skills assessment to matching, progress tracking and subscriptions.</li>
+          <li>Validated the problem with a survey of 61 young Egyptians.</li>
+          <li>Analyzed the market with DESTEP, Porter's Five Forces and competitor mapping.</li>
+          <li>Built a freemium and premium business model with a 200 EGP monthly subscription.</li>
+        </ul>
+      </div>
+      <div class="facts">
+        <h3>Key numbers</h3>
+        <div class="figures">
+          <div class="figure"><strong>70.5%</strong><span>of people surveyed would use BuildX</span></div>
+          <div class="figure"><strong>50.8%</strong><span>did not know how to start a business</span></div>
+          <div class="figure"><strong>118</strong><span>paying users a month to break even</span></div>
+          <div class="figure"><strong>24 to 1</strong><span>lifetime value to acquisition cost</span></div>
+        </div>
+        <div class="chips"><span>Figma</span><span>Survey research</span><span>DESTEP</span><span>Porter's Five Forces</span><span>Business modeling</span></div>
+      </div>
+    </div>
+    <div class="phones">
+      <figure><video controls preload="metadata" playsinline poster="img/buildx-1.jpg" src="video/buildx-1.mp4"></video><figcaption>Prototype walkthrough 1</figcaption></figure>
+      <figure><video controls preload="metadata" playsinline poster="img/buildx-2.jpg" src="video/buildx-2.mp4"></video><figcaption>Co founder profile and matching</figcaption></figure>
+      <figure><video controls preload="metadata" playsinline poster="img/buildx-3.jpg" src="video/buildx-3.mp4"></video><figcaption>Prototype walkthrough 3</figcaption></figure>
+    </div>
+    <div class="gallery two">
+      <figure><img src="img/buildx-validation.jpg" alt="Validation slide showing survey results" loading="lazy"><figcaption>Validation results from the pitch</figcaption></figure>
+      <figure><img src="img/buildx-advantage.jpg" alt="Competitive advantage slide" loading="lazy"><figcaption>Competitive advantage from the pitch</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="project" id="churn">
+    <h2>Customer Churn Prediction</h2>
+    <p class="meta"><span><b>Team</b> six students</span><span><b>Type</b> Machine learning classification</span></p>
+    <p class="summary">A model that predicts which telecom customers are about to leave, so a company can reach them with retention offers before they go.</p>
+    <div class="cols">
+      <div class="did">
+        <h3>What we did</h3>
+        <ul>
+          <li>Cleaned and prepared data on over 7,000 customers with one hot encoding, scaling and a train and test split.</li>
+          <li>Trained and compared Logistic Regression, Random Forest and XGBoost using precision, recall, F1 score and ROC AUC. XGBoost performed best.</li>
+          <li>Found that short tenure, month to month contracts and high monthly charges drive churn.</li>
+          <li>Turned the results into retention recommendations for high risk customers.</li>
+        </ul>
+      </div>
+      <div class="facts">
+        <h3>Tools</h3>
+        <div class="chips"><span>Python</span><span>pandas</span><span>NumPy</span><span>scikit learn</span><span>XGBoost</span><span>Matplotlib</span><span>Seaborn</span></div>
+      </div>
+    </div>
+    <a class="open" href="churn-notebook.html">Open the full notebook</a>
+  </section>
+
+  <section class="project" id="bankease">
+    <h2>BankEase: Customer Segmentation</h2>
+    <p class="meta"><span><b>Course</b> Financial Technologies</span><span><b>Type</b> Machine learning clustering</span></p>
+    <p class="summary">A digital bank concept that splits customers into groups, so students, expats and investors each get the onboarding and documents that fit them.</p>
+    <div class="cols">
+      <div class="did">
+        <h3>What we did</h3>
+        <ul>
+          <li>Created the BankEase concept from scratch as a team.</li>
+          <li>Segmented over 8,000 customers into four groups with K Means, choosing the number of groups with the Elbow Method and Silhouette Score.</li>
+          <li>Checked the segments with Hierarchical Clustering, and used DBSCAN to flag unusual customers.</li>
+          <li>Compared our approach with how Fawry, valU and PayPal use segmentation.</li>
+        </ul>
+      </div>
+      <div class="facts">
+        <h3>Tools</h3>
+        <div class="chips"><span>Python</span><span>scikit learn</span><span>K Means</span><span>Hierarchical Clustering</span><span>DBSCAN</span><span>PCA</span></div>
+      </div>
+    </div>
+    <div class="gallery two">
+      <figure><img src="img/bankease-elbow.jpg" alt="Elbow method chart for choosing the number of clusters" loading="lazy"><figcaption>Choosing the number of groups</figcaption></figure>
+      <figure><img src="img/bankease-kmeans.jpg" alt="Customer clusters plotted with PCA" loading="lazy"><figcaption>Four customer segments shown with PCA</figcaption></figure>
+      <figure><img src="img/bankease-dbscan.jpg" alt="DBSCAN clusters and outliers" loading="lazy"><figcaption>DBSCAN flagging unusual customers</figcaption></figure>
+      <figure><img src="img/bankease-cover.jpg" alt="BankEase presentation cover" loading="lazy"><figcaption>Presentation cover</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="project" id="citibike">
+    <h2>Citi Bike Big Data Analysis</h2>
+    <p class="meta"><span><b>Course</b> Big Data and NoSQL, grade A</span><span><b>Team</b> six students</span></p>
+    <p class="summary">An analysis of over 205,000 New York bike share trips with Apache Spark, finding when, where and how people ride.</p>
+    <div class="cols">
+      <div class="did">
+        <h3>What we did</h3>
+        <ul>
+          <li>Processed the trips with PySpark and engineered features such as distance, speed, time of day and season.</li>
+          <li>Built rules to flag invalid records before analysis.</li>
+          <li>Wrote 10 queries, including custom UDFs, on rush hours, busiest stations and routes, and overused bikes.</li>
+          <li>Trained three SparkML classifiers and charted the results in Matplotlib.</li>
+        </ul>
+      </div>
+      <div class="facts">
+        <h3>Key numbers</h3>
+        <div class="figures">
+          <div class="figure"><strong>205,101</strong><span>trips analyzed</span></div>
+          <div class="figure"><strong>10</strong><span>analytical queries</span></div>
+        </div>
+        <div class="chips"><span>Apache Spark</span><span>PySpark</span><span>SparkML</span><span>Spark UDFs</span><span>Matplotlib</span></div>
+      </div>
+    </div>
+    <a class="open" href="citibike-notebook.html">Open the full notebook</a>
+  </section>
+
+  <footer>Team projects list my own role where it was defined. Student ID numbers have been removed from the shared notebooks.</footer>
+</main>
+
+</body>
+</html>
