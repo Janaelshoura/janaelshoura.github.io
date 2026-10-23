@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Jana Elshoura, final year Business Informatics student in Cairo, working where business meets creativity.">
+<title>Jana Elshoura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one personal reading column; a two part "path" strip (architecture then business) is the signature element */
+:root{
+  --bg:#f6f5f2; --panel:#ffffff; --fg:#1d1f27; --muted:#5d6070; --line:#e2e0da; --accent:#2b4bd6; --warm:#c8553d; --chip:#ecebe6;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Sans 3",ui-sans-serif,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#121318;--panel:#1a1c23;--fg:#ececf0;--muted:#a1a4b3;--line:#2c2f3a;--accent:#8ea2ff;--warm:#e38a74;--chip:#24262f;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#121318;--panel:#1a1c23;--fg:#ececf0;--muted:#a1a4b3;--line:#2c2f3a;--accent:#8ea2ff;--warm:#e38a74;--chip:#24262f;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:18px/1.65 var(--body);padding-inline:16px;padding-block:44px 88px}
+main{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}
+header{display:flex;flex-direction:column;gap:14px}
+h1{font:700 clamp(40px,8vw,68px)/1 var(--display);margin:0;letter-spacing:-.015em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--warm)}
+.lede{margin:0;font-size:21px;line-height:1.5;max-width:58ch}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+nav a{font:500 14px/1 var(--body);text-decoration:none;color:var(--fg);border:1px solid var(--line);padding:10px 14px;border-radius:999px;background:var(--panel)}
+nav a:hover{border-color:var(--accent);color:var(--accent)}
+section{display:flex;flex-direction:column;gap:14px}
+h2{font:700 clamp(24px,4vw,30px)/1.15 var(--display);margin:0;text-wrap:balance}
+p{margin:0;max-width:64ch}
+.path{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:4px}
+@media (min-width:620px){.path{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch}}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.step b{font:700 20px/1.2 var(--display)}
+.step span{color:var(--muted);font-size:16px;line-height:1.45}
+.step .tag{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--warm)}
+.arrow{display:none;align-self:center;color:var(--muted);font:500 22px/1 var(--mono)}
+@media (min-width:620px){.arrow{display:block}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font:14px/1 var(--body);background:var(--chip);padding:9px 12px;border-radius:999px}
+.item{display:flex;flex-direction:column;gap:4px;padding-top:14px;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:0;padding-top:0}
+.item b{font:700 19px/1.3 var(--display)}
+.item .meta{font:13px/1.4 var(--mono);color:var(--muted)}
+.contact{display:flex;flex-direction:column;gap:8px;font-size:17px}
+.contact .row{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.contact .label{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);min-width:84px}
+.contact .mail{user-select:all}
+footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Cairo, Egypt</p>
+    <h1>Hi, I'm Jana. I work where business meets <em>creativity</em>.</h1>
+    <p class="lede">I'm a final year Business Informatics student at the German International University. I love understanding how brands are built, how people experience them, and how data and good ideas come together to make them work.</p>
+    <nav aria-label="Pages">
+      <a href="../">See my projects</a>
+      <a href="https://www.linkedin.com/in/jana-alshoura-9526a0415" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section aria-labelledby="story">
+    <h2 id="story">My path</h2>
+    <p>I didn't start in business. I began my studies in Architecture, where I learned to think visually and to care about how a space, or anything really, feels to the people who use it. After a year and a half, I moved to Business Informatics, where I added the analytical side: data, systems and how companies make decisions.</p>
+    <div class="path">
+      <div class="step"><span class="tag">Where I started</span><b>Architecture</b><span>Design, structure, and seeing things the way people experience them.</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><span class="tag">Where I am now</span><b>Business Informatics</b><span>Data, strategy and technology, graduating October 2027.</span></div>
+    </div>
+    <p>Today I use both. I can look at an idea and ask whether it feels right, and then look at the numbers to see whether it's actually working.</p>
+  </section>
+
+  <section aria-labelledby="work">
+    <h2 id="work">What I've done</h2>
+    <div class="item">
+      <b>Red Bull, Cairo</b>
+      <span class="meta">On ground Sales and Operations · October 2024 to September 2025</span>
+      <p>A year in the field, at events and on the ground, promoting the brand through activations designed to drive sales. I represented Red Bull face to face every day and was recognized as a Top Achiever. It taught me how a brand really lives in the small details.</p>
+    </div>
+    <div class="item">
+      <b>University projects</b>
+      <span class="meta">Startup strategy · customer analytics · big data</span>
+      <p>I led a startup project as CEO, from a survey of 61 people to a business model and a full app prototype in Figma, and worked on data projects about customers and behavior. <a href="../">See them on my projects page</a>.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="interests">
+    <h2 id="interests">What I care about</h2>
+    <div class="chips">
+      <span>Branding</span><span>Public relations</span><span>Marketing strategy</span><span>Consumer behavior</span><span>Design and visual culture</span><span>AI in marketing</span><span>Entrepreneurship</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="beyond">
+    <h2 id="beyond">Beyond work</h2>
+    <p>I've volunteered with VeryNile, an initiative cleaning the Nile and raising awareness about plastic waste, and at Model United Nations conferences in schools.</p>
+  </section>
+
+  <section aria-labelledby="contact" id="contact">
+    <h2>Say hello</h2>
+    <div class="contact">
+      <div class="row"><span class="label">Email</span><span class="mail">janaelshoura@gmail.com</span></div>
+      <div class="row"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/jana-alshoura-9526a0415" target="_blank" rel="noopener">linkedin.com/in/jana-alshoura-9526a0415</a></div>
+      <div class="row"><span class="label">Projects</span><a href="../">janaelshoura.github.io</a></div>
+    </div>
+  </section>
+
+  <footer>Jana Elshoura · Cairo, Egypt</footer>
+</main>
+</body>
+</html>
