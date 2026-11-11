@@ -118,6 +118,12 @@ figcaption{font-size:14px;color:var(--muted)}
 .flow b{display:block;font:700 17px/1.2 var(--display);margin-bottom:4px}
 .flow span{font-size:15px;color:var(--muted);line-height:1.4}
 
+/* architecture */
+.story{max-width:66ch;display:flex;flex-direction:column;gap:14px;font-size:18px;line-height:1.65;margin-bottom:24px}
+.story p{margin:0}
+.story p:first-child::first-letter{font:800 3.1em/0.85 var(--display);float:left;margin:4px 8px 0 0;color:var(--warm)}
+.collage img{border-radius:14px;border:1px solid var(--line);background:#f3f1ec}
+
 /* skills */
 .skills{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
 @media (min-width:760px){.skills{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -146,6 +152,7 @@ footer{font-size:14px;color:var(--muted);text-align:center;padding-bottom:20px}
     <a class="logo" href="#top">Jana<span>.</span></a>
     <nav class="links" aria-label="Sections">
       <a href="#about">About</a>
+      <a href="#architecture">Architecture</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
@@ -187,6 +194,21 @@ footer{font-size:14px;color:var(--muted);text-align:center;padding-bottom:20px}
       <div class="step"><span class="tag">Where I'm going</span><b>Marketing and brand</b><span>Work where business, people and ideas come together, in marketing, brand or consulting.</span></div>
     </div>
     <p class="prose">Architecture taught me to think visually and to design for the people who will use something. Business Informatics added data, systems and how companies make decisions. Today I use both: I can look at an idea and ask whether it feels right, then look at the numbers to see whether it's actually working. You can see that mix in my projects, from designing a full app in Figma to analyzing thousands of customers in Python. In team projects, I usually take care of the presentations and design. <a href="about/">Read more about me</a>.</p>
+  </section>
+
+  <section id="architecture" class="reveal">
+    <div class="sechead">
+      <p class="tag">Architecture</p>
+      <h2 class="sec">Every drawing has a story</h2>
+    </div>
+    <div class="story">
+      <p>Every drawing here started with a concept. None of it came from creativity alone. It came from thinking inside and outside the box at the same time, while keeping the logic behind the design. Architecture taught me that every design around us carries a vision worth understanding, and that I have the eye to capture it and bring it to life with passion.</p>
+      <p>I left architecture because I love creativity most when it is free. Still, it shaped me more than any single course or degree could, and I carry that love for design into everything I do, now with the skills to make it real.</p>
+    </div>
+    <figure class="collage">
+      <a href="img/architecture-collage.jpg" target="_blank" rel="noopener"><img src="img/architecture-collage-sm.jpg" alt="Collage of Jana's architecture work: hand drawn elevations, abstraction studies, the Smith House study, city collages, plans, an exploded axonometric and perspectives" loading="lazy"></a>
+      <figcaption>Hand drawings, abstraction studies, precedent studies, city collages, plans and perspectives from my years in architecture. Tap to see it full size.</figcaption>
+    </figure>
   </section>
 
   <section id="projects" class="reveal">
